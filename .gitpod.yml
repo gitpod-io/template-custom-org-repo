@@ -26,7 +26,9 @@ tasks:
           IFS='~' read -ra urls <<<"$CUSTOM_REPO_URLS";
           for repo in "${urls[@]}"; do {
             IFS='|' read -r host owner reponame <<<"$repo"
-            git -C "$GITPOD_REPO_ROOT" clone --filter=tree:0 "https://${host}/${owner}/${reponame}";
+            if test ! -e "$GITPOD_REPO_ROOT/$reponame"; then {
+              git -C "$GITPOD_REPO_ROOT" clone --filter=tree:0 "https://${host}/${owner}/${reponame}";
+            } fi
           } done
         } else {
           printf 'error: %s\n' 'CUSTOM_REPO_URLS was not passed as a parameter in your Gitpod URL';
