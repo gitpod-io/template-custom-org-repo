@@ -1,6 +1,6 @@
 # Use custom organization repository without installing Gitpod app
 
-What if you want to use Gitpod but your ORG won't install the Gitpod app for you, this can help you in that.
+What if you want to use Gitpod but your private Github ORG won't install the Gitpod app for you, this can help you in that.
 
 - Create a new token from [here](https://github.com/settings/tokens/new) with scopes of `{repo, admin:org}`
 - Copy the token, go to https://gitpod.io/variables
