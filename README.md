@@ -6,6 +6,6 @@ What if you want to use Gitpod but your ORG won't install the Gitpod app for you
 - Copy the token, go to https://gitpod.io/variables
   - Create a new variable called `CUSTOM_GH_TOKEN` with the value of your token, set the scope to `*/*`
 - Copy this: https://gitpod.io/#CUSTOM_REPO_URLS=github.com|bashbox|std~github.com|csweichel|lama/https://github.com/gitpod-io/custom_org_repo (just an example)
-  - Specify your repos inside the value of 👆 `CUSTOM_REPO_URLS`
+  - Specify your repos inside the value of 👆 `CUSTOM_REPO_URLS` (you can overwrite the example values)
   - It could be separated by `~` for multiple repos.
   - The format is: `<host>|<owner>|<repo-name>`
