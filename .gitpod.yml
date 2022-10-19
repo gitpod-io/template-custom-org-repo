@@ -19,9 +19,9 @@ tasks:
           exit;
         } fi
 
-        git config --global --add credential.helper "!/usr/bin/env gh auth git-credential" && \
+        gh auth setup-git && \
           printf 'info: %s\n' '"gh" CLI was setup as a git-credential-helper';
-        
+
         if test -n "${CUSTOM_REPO_URLS:-}"; then {
           IFS='~' read -ra urls <<<"$CUSTOM_REPO_URLS";
           for repo in "${urls[@]}"; do {
